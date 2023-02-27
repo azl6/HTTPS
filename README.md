@@ -70,3 +70,8 @@ This is possible because intermediate-certificates are signed by the root-certif
 
 ![image](https://user-images.githubusercontent.com/80921933/221681490-9b1f5dd0-be16-420b-893f-97b5ebd7ec05.png)
 
+# Certificate domain scopes
+
+![image](https://user-images.githubusercontent.com/80921933/221687673-1f2bd140-2fd9-4977-83f6-e28518ec7f81.png)
+
+
