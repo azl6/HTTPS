@@ -17,3 +17,29 @@ echo "Hello world!" > file.txt
 shasum -a 256 file.txt 
 0ba904eae8773b70c75333db4de2f3ac45a8ad4ddba1b242f0b3cfc199391dd8  file.txt ####### Hash gerado pelo algorítmo
 ``` 
+
+# Using OpenSSL
+
+The following command generates a RSA key
+
+```bash
+openssl genrsa
+```
+
+To encrypt it, we can use the flag `-aes256`
+
+```bash
+openssl genrsa -aes256
+```
+
+To save the private-key to a file, we use the `-out` flag
+
+```bash
+openssl genrsa -aes256 -out myoutfile.txt
+```
+
+When we generate a private-key with openssl, the public-key comes "mixed" with it. To extract the public-key, we use the following command:
+
+```bash
+openssl rsa -in <OUTFILE> -outform PEM -pubout -out <PUBLICKEYNAME>
+```
