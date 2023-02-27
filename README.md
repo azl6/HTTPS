@@ -58,9 +58,15 @@ openssl genrsa 4096
 
 The OS comes "packed" with the root certificates installed. 
 
-That means, if the certificate provided by the website matches the downloaded root-certificate, a HTTPS connection will be successfully established
+That means, if the certificate provided by the website matches the OS-downloaded root-certificate, a HTTPS connection will be successfully established
+
+This is possible because intermediate-certificates are signed by the root-certificates, and the intermediate-certificates sign the end-user certificate
 
 ![Screenshot from 2023-02-27 17-06-08](https://user-images.githubusercontent.com/80921933/221672411-8c601bea-5835-42f3-ad64-564edfc6e039.png)
 
 ![sgds](https://user-images.githubusercontent.com/80921933/221672955-fd9f4d73-134b-4aa4-97f1-1b58272ea315.png)
+
+# Certificates trust chain 
+
+![image](https://user-images.githubusercontent.com/80921933/221681490-9b1f5dd0-be16-420b-893f-97b5ebd7ec05.png)
 
