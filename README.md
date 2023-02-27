@@ -74,4 +74,12 @@ This is possible because intermediate-certificates are signed by the root-certif
 
 ![image](https://user-images.githubusercontent.com/80921933/221687673-1f2bd140-2fd9-4977-83f6-e28518ec7f81.png)
 
+# Establishing a TLS connection
+
+Cyper suites are information about the algorithms that will be used in that particular session, like AES-128 for encryption and SHA-256 for hashing
+
+![image](https://user-images.githubusercontent.com/80921933/221692429-884c8abf-3abd-4731-8a0e-76712e1259d3.png)
+
+![image](https://user-images.githubusercontent.com/80921933/221692051-f46c8315-f7c9-49ae-a121-ee725f317388.png)
+
 
