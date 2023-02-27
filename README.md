@@ -53,3 +53,14 @@ We can also generate different sizes of keys, like
 ```bash
 openssl genrsa 4096
 ```
+
+# How does the browser trust certain certificates
+
+The OS comes "packed" with the root certificates installed. 
+
+That means, if the certificate provided by the website matches the downloaded root-certificate, a HTTPS connection will be successfully established
+
+![Screenshot from 2023-02-27 17-06-08](https://user-images.githubusercontent.com/80921933/221672411-8c601bea-5835-42f3-ad64-564edfc6e039.png)
+
+![sgds](https://user-images.githubusercontent.com/80921933/221672955-fd9f4d73-134b-4aa4-97f1-1b58272ea315.png)
+
