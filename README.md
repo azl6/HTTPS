@@ -138,7 +138,9 @@ server {
 
 # Generating a self-signed certificate and using it on NGINX
 
-Let's generate the **key** and **certificate** with the following command:
+**PRE-REQUISITES:** For this to work, we need NGINX running on the server and DNS records pointing to it.
+
+Let's generate the **key** and **certificate** (in the /etc/ssl/ folder, since it's a good practice) with the following command:
 
 Source for command below: https://stackoverflow.com/questions/10175812/how-to-generate-a-self-signed-ssl-certificate-using-openssl
 
@@ -158,3 +160,8 @@ After configuring the block, we need to restart nginx (`sudo service nginx stop`
 
 1. If the error says something about "more arguments being passed", make sure thatthe added lines end with `;`
 2. If the error says the certificate couldn't be loaded, that's because we provided a passphrase when creating the certificate, and the NGINX configuration file needs to know that passphrase. To fix that, we must update the `/etc/nginx/nginx.conf` file with the following tutorial: https://stackoverflow.com/questions/33084347/pass-cert-password-to-nginx-with-https-site-during-restart. Important to notice that the passphrase file must have the chosen password inside for the command to work.
+
+After restarting NGINX and accessing our DNS, we'll see the following page:
+
+![image](https://user-images.githubusercontent.com/80921933/223860846-e9b21b6f-001b-4c86-a47f-b7e97a832fec.png)
+
