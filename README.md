@@ -3,6 +3,7 @@
 1. How widely is CloudFlare used?
 2. Does the usage of SSL certificates imply on the usage of some sort of reverse-proxy?
 3. Snake-oil certificates (self-signed) are not for public access, since the browser won't trust it. However, it means that we MUST use a reverse-proxy with it, right?
+4. How do I configure NGINX to point to a server instead of pure HTML pages?
 
 # Symmetric and asymmetric algorithms
 
