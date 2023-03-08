@@ -82,4 +82,18 @@ Cyper suites are information about the algorithms that will be used in that part
 
 ![image](https://user-images.githubusercontent.com/80921933/221692051-f46c8315-f7c9-49ae-a121-ee725f317388.png)
 
+# Installing certificates on nginx
+
+To install nginx on Amazon Linux 2 machines (source: https://stackoverflow.com/questions/57784287/how-to-install-nginx-on-aws-ec2-linux-2):
+
+```bash
+sudo amazon-linux-extras enable nginx1
+sudo yum clean metadata
+sudo yum -y install nginx
+sudo service nginx start
+```
+
+Now, to create a server-block for our domain, follow the **Step 5** of the following tutorial: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+
+
 
