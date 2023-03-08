@@ -1,3 +1,8 @@
+# Questions
+
+1. How widely is CloudFlare used?
+2. Does the usage of SSL certificates imply on the usage of some sort of reverse-proxy?
+
 # Symmetric and asymmetric algorithms
 
 AES: Simetric, like AES256 used for SSE-S3. **Same key to encrypt and decrypt**.
