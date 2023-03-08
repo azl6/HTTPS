@@ -95,5 +95,24 @@ sudo service nginx start
 
 Now, to create a server-block for our domain, follow the **Step 5** of the following tutorial: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
 
+Explanation of some aspects of the configuration:
+
+This configuration consists in creating the `/var/www/your_domain/html/index.html` structure, changing `my_domain` for our created domain, aka alexthedeveloper.com.br
+
+```bash
+server {
+        listen 80; ########## Listening port for IPV4
+        listen [::]:80; ##### Listening port for IPV6
+
+        root /var/www/alexthedeveloper.com.br/html; ### Place the client will be redirected to when entering the address in the server_name field
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name alexthedeveloper.com.br www.alexthedeveloper.com.br; ### Adresses that will redirect to the root file
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+```
 
 
