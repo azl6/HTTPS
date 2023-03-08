@@ -108,4 +108,6 @@ server {
 }
 ```
 
+After that, we just normally follow the tutorial.
+
 
