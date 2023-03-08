@@ -165,3 +165,21 @@ After restarting NGINX and accessing our DNS, we'll see the following page:
 
 ![image](https://user-images.githubusercontent.com/80921933/223860846-e9b21b6f-001b-4c86-a47f-b7e97a832fec.png)
 
+This happens because our certificate is self-signed, and therefore, it's not trusted by the browser.
+
+To get a certificate that is trusted by the browsers, we need to generate a CSR (Certificate Sign Request) and get a certificate from a free SSL certificate issuer (there are many in the internet, Bogdan used the following on class 102: ssl.com)
+
+# Generating a CSR to get a free signed SSL certificate
+
+Use the command below:
+
+```bash
+openssl req -new -newkey rsa:4096 -nodes -keyout <KEYNAME>.key -out <CSRNAME>.csr
+```
+
+This will generate a Certificate Sign Request (CSR) that can be used to retrieve a signed SSL certificate from a free SSL certificate issuer.
+
+This certificate is mostly used to be directly faced by customers, since self-signed certificates aren't made to be customer-facing since the browser won't trust them.
+
+For a free SSL certificate issuer website, I recommend **ssl.com**, or to follow Bogdan's class 102 or following a 3rd party tutorial.
+
