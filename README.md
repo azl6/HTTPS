@@ -183,3 +183,23 @@ This certificate is mostly used to be directly faced by customers, since self-si
 
 For a free SSL certificate issuer website, I recommend **ssl.com**, or to follow Bogdan's class 102 or following a 3rd party tutorial.
 
+# Very important problem after getting a signed certificate
+
+We can use the following website to check our certificate: https://www.sslshopper.com/ssl-checker.html#hostname=
+
+If, at the end of the check, we see the following error:
+
+![image](https://user-images.githubusercontent.com/80921933/223880930-d738dc38-46bb-400c-bbeb-34e9ac2ac5f6.png)
+
+It means that we only provided the main certificate.
+
+To fix that, we must get the **Intermediate Certificate** (usually comes together with the email when we require it)
+
+![image](https://user-images.githubusercontent.com/80921933/223881268-3a7f7121-1c99-45e5-a226-bc7aa3c75992.png)
+
+Then, we convert it to the **.txt** format (to make it "readable") and concatenate it at the `.pem` certificate file, like that:
+
+![Screenshot from 2023-03-08 21-08-47](https://user-images.githubusercontent.com/80921933/223881596-4b395c4d-2262-440b-9e77-14a3025ff47d.png)
+
+
+
