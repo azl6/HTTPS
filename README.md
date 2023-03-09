@@ -201,5 +201,16 @@ Then, we convert it to the **.txt** format (to make it "readable") and concatena
 
 ![Screenshot from 2023-03-08 21-08-47](https://user-images.githubusercontent.com/80921933/223881596-4b395c4d-2262-440b-9e77-14a3025ff47d.png)
 
+# Configuring redirects from HTTP to HTTPS in NGINX
+
+We can add the following line to our `server` block in the `sudo nano /etc/nginx/sites-available/\<your_domain>` file
+
+```
+server {
+        return 301 https://example.com$request_uri;
+}
+```
+
+The `request_uri` means that any path passed will also be redirected to HTTPS, like: http://example.com/aboutme -> https://example.com/aboutme 
 
 
