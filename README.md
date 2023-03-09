@@ -209,6 +209,7 @@ We can add the following line to our `server` block in the `sudo nano /etc/nginx
 
 ```
 server {
+        # ...
         return 301 https://example.com$request_uri;
 }
 ```
