@@ -216,4 +216,6 @@ server {
 
 The `request_uri` means that any path passed will also be redirected to HTTPS, like: http://example.com/aboutme -> https://example.com/aboutme 
 
+# Generating a certificate with Certbot and Lets Encrypt
 
+Follow this video's tutorial: https://www.youtube.com/watch?v=5wzs-pcDQ3k
