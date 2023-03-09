@@ -146,6 +146,8 @@ Let's generate the **key** and **certificate** (in the /etc/ssl/ folder, since i
 
 Source for command below: https://stackoverflow.com/questions/10175812/how-to-generate-a-self-signed-ssl-certificate-using-openssl
 
+Consider using the `-nodes` flag to skip the password. If we don't use this flag, we will be prompted to provide a password, and will need to configure NGINX to use a password file in the future (also explained in this tutorial).
+
 (Change \<MYDOMAIN> for your domain, like **alexthedeveloper.com.br**. I'm still not sure if this is a required step. I think not.)
 
 ```bash
