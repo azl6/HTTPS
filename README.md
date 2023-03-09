@@ -4,6 +4,8 @@
 2. Does the usage of SSL certificates imply on the usage of some sort of reverse-proxy?
 3. Snake-oil certificates (self-signed) are not for public access, since the browser won't trust it. However, it means that we MUST use a reverse-proxy with it, right?
 4. How do I configure NGINX to point to a server instead of pure HTML pages?
+5. Does Lets Encrypt work similarly as free signed certificates, where we provide a CSR and get a signed certificate?
+6. How does certificates work when our reverse-proxy isn't NGINX, like an AWS LB? Do we store the certificates in either IAM certificate store or ACM and point to these certificates?
 
 # Symmetric and asymmetric algorithms
 
